@@ -4,13 +4,8 @@ module.exports = {
       hostname: "https://learn-webservices.netlify.com"
     }
   },
-  locales: {
-    "/": {
-      lang: "fr-FR",
-      title: "Webservices",
-      description: "Ateliers et cours autour des webservices"
-    }
-  },
+  title: "Learn webservices",
+  description: "Ateliers et cours autour des webservices",
   themeConfig: {
     editLinkText: "Edit cette page sur Github",
     lastUpdated: "Mis à jour le",
@@ -19,13 +14,7 @@ module.exports = {
     docsRepo: "Slashgear/webservices",
     docsDir: "docs",
     editLinks: true,
-    locales: {
-      "/": {
-        selectText: "Languages",
-        label: "English",
-        nav: [{ text: "Home", link: "/" }],
-        sidebar: []
-      }
-    }
+    sidebar: ["/", "/json-rpc.md", "/soap.md", "/rest.md", "/graphql.md"],
+    nav: [{ text: "Home", link: "/" }]
   }
 };
