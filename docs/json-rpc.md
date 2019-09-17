@@ -50,7 +50,7 @@ On peut également appeler une procédure distante sans attendre de réponse.
 
 L'objectif de ce tp est de fournir un API JSON-rpc écrite en [Go](https://golang.org/)
 
-### 1. Installation de Go en local
+### Installation de Go en local
 
 - Suivez la [doc d'installation de Go](https://golang.org/doc/install) à la lettre.
 - Visual Studio Code est un très bon Editeur pour développer en Go, IntelliJ fait aussi le café
@@ -137,7 +137,7 @@ doit retourner
 
 </details>
 
-#### Le code à faire
+### Le code à faire
 
 Dans le dossier [../workshops/jsonrpc](../workshops/jsonrpc) est défini un server et un client Go.
 
