@@ -111,6 +111,76 @@ Tout peut y être décrit:
 
 Dans le dossier [../workshops/soap](../workshops/soap) est défini un server de WS SOAP en Java Spring.
 
+Voici le WSDL a générer grâce à Spring
+
+```xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://spring.io/guides/gs-producing-web-service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://spring.io/guides/gs-producing-web-service" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+  <wsdl:types>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+
+    <xs:element name="getBookRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getBookResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="book" type="tns:book"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="book">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="numberOfPages" type="xs:int"/>
+            <xs:element name="publisher" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getBookRequest">
+    <wsdl:part element="tns:getBookRequest" name="getBookRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBookResponse">
+    <wsdl:part element="tns:getBookResponse" name="getBookResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="2345">
+    <wsdl:operation name="getBook">
+      <wsdl:input message="tns:getBookRequest" name="getBookRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getBookResponse" name="getBookResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="2345Soap11" type="tns:2345">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getBook">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getBookRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="2345Service">
+    <wsdl:port binding="tns:2345Soap11" name="2345Soap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
+```
+
 A faire:
 
 - Lire la doc de spring relative au WS SOAP [https://spring.io/guides/gs/producing-web-service/](https://spring.io/guides/gs/producing-web-service/)
@@ -120,6 +190,21 @@ A faire:
 - Faire valider au prof
 - Ajouter une fonction `getBooks` qui permet de récupérer l'ensemble des livres de Got
 - Faire valider au prof
+- Générer un client automatiquement grâce au WSDL.
+
+## Pour tester votre webservice
+
+GetBook
+
+```sh
+curl --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
+```
+
+GetBooks
+
+```sh
+curl --header "content-type: text/xml" -d @multiRequest.xml http://localhost:8080/ws
+```
 
 ## (Optionnel) Déploiement du service dans le cloud
 
