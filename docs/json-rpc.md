@@ -65,7 +65,7 @@ Le webservice à faire est assez simple, il doit retourner les maison de _Game o
 ```js
 {
   "jsonrpc": "2.0",
-  "method": "house",
+  "method": "house.GetHouse",
   "params": { id: 1 },
   "id": 3
 }
@@ -93,7 +93,7 @@ doit retourner
 ```js
 {
   "jsonrpc": "2.0",
-  "method": "houses",
+  "method": "houses.GetHouses",
   "params": [],
   "id": 3
 }
@@ -157,6 +157,14 @@ Ces ressources peuvent vous aider:
 - Ajouter une méthode `GetHouses`
 - **Montrer au prof**
 - (en option) faire en sorte de mutualiser le code dupliqué entre le client et le server.
+
+### Tester son webservice
+
+Les requêtes suivantes devraient échouer, pourquoi ?
+
+<JSONRpc method="house.GetHouse" :params="{Id: 1}" id="1" />
+
+<JSONRpc method="house.GetHouses" :params="{}" id="2" />
 
 ## (Optionnel) Déploiement du service dans le cloud
 
