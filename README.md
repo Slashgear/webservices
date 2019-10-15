@@ -13,13 +13,14 @@
   <a href="https://twitter.com/Slashgear_">
     <img alt="Twitter: Slashgear_" src="https://img.shields.io/twitter/follow/Slashgear_.svg?style=social" target="_blank" />
   </a>
+  <a href="https://greenkeeper.io/" rel="nofollow" class="rich-diff-level-one">
+    <img src="https://camo.githubusercontent.com/a3c41681f834daaaf2fd76dd695ccaed6a6fe722/68747470733a2f2f6261646765732e677265656e6b65657065722e696f2f536c617368676561722f77656273657276696365732e737667" alt="Greenkeeper badge" data-canonical-src="https://badges.greenkeeper.io/Slashgear/webservices.svg" style="max-width:100%;">
+  </a>
 </p>
 
 > Course about webservices made with ♥️ with Vuepress and deployed on Netlify
 
 ### 🏠 [Homepage](https://learn-webservices.netlify.com/)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/Slashgear/webservices.svg)](https://greenkeeper.io/)
 
 ## Author
 
