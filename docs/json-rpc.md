@@ -139,7 +139,7 @@ doit retourner
 
 ### Le code à faire
 
-Dans le dossier [../workshops/jsonrpc](../workshops/jsonrpc) est défini un server et un client Go.
+Dans le dossier [workshops/jsonrpc](https://github.com/Slashgear/webservices/tree/master/workshops/jsonrpc) est défini un server et un client Go.
 
 La structure de donnée `House` est déjà défini pour vous.
 
