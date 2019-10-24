@@ -109,7 +109,7 @@ Tout peut y être décrit:
 
 ## Votre premier service SOAP avec WSDL grâce à Spring
 
-Dans le dossier [../workshops/soap](../workshops/soap) est défini un server de WS SOAP en Java Spring.
+Dans le dossier [workshops/soap](https://github.com/Slashgear/webservices/tree/master/workshops/soap) est défini un server de WS SOAP en Java Spring.
 
 Voici le WSDL a générer grâce à Spring
 
