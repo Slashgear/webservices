@@ -20,7 +20,7 @@ Vous devez définir un C.R.U.D sur l'entité `Character`
 - gender	string	The gender of this character.
 - culture	string	The culture that this character belongs to.
 - died	string	Textual representation of when and where this character died.
-- titles	array of strings	TThe titles that this character holds.
+- titles	array of strings	The titles that this character holds.
 - aliases	array of strings	The aliases that this character goes by.
 - father	string	The character resource URL of this character's father.
 - mother	string	The character resource URL of this character's mother.
