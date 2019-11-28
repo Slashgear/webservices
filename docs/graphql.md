@@ -17,7 +17,7 @@ type Book {
   country: String
   mediaType: String
   released: String
-  characters: [String]
+  characters: [Character]
   povCharacters: [String]
 }
 
