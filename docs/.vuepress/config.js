@@ -1,8 +1,8 @@
 module.exports = {
   plugins: {
     sitemap: {
-      hostname: "https://learn-webservices.netlify.com"
-    }
+      hostname: "https://learn-webservices.netlify.com",
+    },
   },
   title: "Learn webservices",
   description: "Ateliers et cours autour des webservices",
@@ -20,8 +20,8 @@ module.exports = {
       "/soap.md",
       "/rest.md",
       "/graphql.md",
-      "/video.md"
+      "/video.md",
     ],
-    nav: [{ text: "Home", link: "/" }]
-  }
+    nav: [{ text: "Home", link: "/" }],
+  },
 };

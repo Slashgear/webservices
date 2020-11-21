@@ -14,7 +14,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "lint": "yarn prettier --list-different 'packages/**/*.{js,md}' 'docs/**/*.{js,md}'"
+    "lint": "yarn prettier --list-different 'docs/**/*.{js,md}'"
   },
   "devDependencies": {
     "husky": "^4.3.0",
@@ -22,8 +22,5 @@
     "pretty-quick": "^3.1.0",
     "vuepress-plugin-sitemap": "^2.3.1",
     "vuepress": "^1.7.1"
-  },
-  "resolutions": {
-    "lodash": "^4.17.15"
   }
 }
