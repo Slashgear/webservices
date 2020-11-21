@@ -6,7 +6,6 @@
   <a href="https://app.netlify.com/sites/learn-webservices/deploys">
     <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/cf236d5c-423a-4f5e-a35a-01a15b15fc5b/deploy-status" target="_blank" />
   </a>
-  <a href="https://travis-ci.org/Slashgear/webservice"><img src="https://travis-ci.org/Slashgear/webservice.svg?branch=master" alt="Build Status"></a>
   <a href="https://github.com/Slashgear/webservices/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
   </a>
