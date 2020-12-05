@@ -111,13 +111,11 @@ Tout peut y être décrit:
 
 Dans le dossier [workshops/soap](https://github.com/Slashgear/webservices/tree/master/workshops/soap) est défini un server de WS SOAP en Java Spring.
 
-Voici le WSDL a générer grâce à Spring
+Utiliser le document de définition suivant pour générer automatiquement le WSDL.
 
 ```xml
-
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://spring.io/guides/gs-producing-web-service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://spring.io/guides/gs-producing-web-service" targetNamespace="http://spring.io/guides/gs-producing-web-service">
-  <wsdl:types>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://spring.io/guides/gs-producing-web-service">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
 
     <xs:element name="getBookRequest">
         <xs:complexType>
@@ -144,53 +142,18 @@ Voici le WSDL a générer grâce à Spring
         </xs:sequence>
     </xs:complexType>
 </xs:schema>
-  </wsdl:types>
-  <wsdl:message name="getBookRequest">
-    <wsdl:part element="tns:getBookRequest" name="getBookRequest">
-    </wsdl:part>
-  </wsdl:message>
-  <wsdl:message name="getBookResponse">
-    <wsdl:part element="tns:getBookResponse" name="getBookResponse">
-    </wsdl:part>
-  </wsdl:message>
-  <wsdl:portType name="2345">
-    <wsdl:operation name="getBook">
-      <wsdl:input message="tns:getBookRequest" name="getBookRequest">
-    </wsdl:input>
-      <wsdl:output message="tns:getBookResponse" name="getBookResponse">
-    </wsdl:output>
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:binding name="2345Soap11" type="tns:2345">
-    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="getBook">
-      <soap:operation soapAction=""/>
-      <wsdl:input name="getBookRequest">
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output name="getBookResponse">
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:service name="2345Service">
-    <wsdl:port binding="tns:2345Soap11" name="2345Soap11">
-      <soap:address location="http://localhost:8080/ws"/>
-    </wsdl:port>
-  </wsdl:service>
-</wsdl:definitions>
 ```
 
 A faire:
 
 - Lire la doc de spring relative au WS SOAP [https://spring.io/guides/gs/producing-web-service/](https://spring.io/guides/gs/producing-web-service/)
 - Faire fonctionner le endpoint spring getBooks
+- Générer un autre module qui servira de client autogénéré grâce au WSDL.
 - Faire valider au prof
 - Générer le client SOAP grâce au WSDL
 - Faire valider au prof
 - Ajouter une fonction `getBooks` qui permet de récupérer l'ensemble des livres de Got
 - Faire valider au prof
-- Générer un client automatiquement grâce au WSDL.
 
 ## Pour tester votre webservice
 

@@ -46,15 +46,12 @@ On peut également appeler une procédure distante sans attendre de réponse.
 }
 ```
 
-## Création d'un webservice JSON-rpc en GO
+## Création d'un webservice JSON-rpc
 
-L'objectif de ce tp est de fournir un API JSON-rpc écrite en [Go](https://golang.org/)
-
-### Installation de Go en local
-
-- Suivez la [doc d'installation de Go](https://golang.org/doc/install) à la lettre.
-- Visual Studio Code est un très bon Editeur pour développer en Go, IntelliJ fait aussi le café
-- Prenez le temps de tester votre installation.
+L'objectif de ce tp est de fournir un API JSON-rpc dans le language que vous souhaitez (Node, Java, Php, Kotlin,etc...).
+Prenez un outil simple que vous connaissez, l'objectif est de délivrer ce webservice le plus vite possible.
+Je vous met à dispo dans cette page un outil pour tester directement votre webservice.
+Cependant il vous faudra fournir le bon header de [CORS](https://developer.mozilla.org/fr/docs/Web/HTTP/CORS)
 
 ### Le webservice à faire
 
@@ -139,19 +136,12 @@ doit retourner
 
 ### Le code à faire
 
-Dans le dossier [workshops/jsonrpc](https://github.com/Slashgear/webservices/tree/master/workshops/jsonrpc) est défini un server et un client Go.
-
 La structure de donnée `House` est déjà défini pour vous.
-
-Ces ressources peuvent vous aider:
-
-- [les bases du langage Go](https://go-tour-fr.appspot.com/welcome/1)
-- [Le module JSON-rpc de go](https://golang.org/pkg/net/rpc/jsonrpc/)
 
 **À faire**
 
-- Compléter le server JSON-RPC
-- Compléter le client
+- Coder un le server JSON-RPC, capable d'exposer les maisons de Game Of Thrones
+- Code un client qui consommera cette API
 - Lancer le server et le client
 - **Montrer au prof**
 - Ajouter une méthode `GetHouses`

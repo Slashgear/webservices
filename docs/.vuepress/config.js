@@ -14,14 +14,7 @@ module.exports = {
     docsRepo: "Slashgear/webservices",
     docsDir: "docs",
     editLinks: true,
-    sidebar: [
-      "/",
-      "/json-rpc.md",
-      "/soap.md",
-      "/rest.md",
-      "/graphql.md",
-      "/video.md",
-    ],
+    sidebar: ["/", "/json-rpc.md", "/soap.md", "/rest.md", "/graphql.md"],
     nav: [{ text: "Home", link: "/" }],
   },
 };

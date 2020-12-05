@@ -2,7 +2,7 @@
 
 ## :speech_balloon: Durée du cours et évaluation
 
-- 4 x 4h de Cours/TP
+- 4 x 3h de Cours/TP
 - 1 Quizz QCM évaluation à la fin du cours
   - 1 minute par question
   - droit aux notes prises en cours, TP et internet
