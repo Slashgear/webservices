@@ -1,6 +1,6 @@
 <template>
   <div class="debugger">
-    <h3>POST https://localhost:1234/rpc</h3>
+    <h3>POST http://localhost:1234/rpc</h3>
     <pre
       class="language-js"
       v-html="JSON.stringify({ method, params, id }, null, 2)"
@@ -18,7 +18,7 @@ export default {
   }),
   methods: {
     send() {
-      return fetch("https://localhost:1234/rpc", {
+      return fetch("http://localhost:1234/rpc", {
         method: "POST",
         headers: {
           Accept: "application/json",
