@@ -152,7 +152,7 @@ La structure de donnée `House` est déjà défini pour vous.
 
 Les requêtes suivantes devraient échouer, pourquoi ?
 
-<JSONRpc method="house.GetHouse" :params="{Id: 1}" id="1" />
+<JSONRpc method="house.GetHouse" :params="{id: 1}" id="1" />
 
 <JSONRpc method="house.GetHouses" :params="{}" id="2" />
 
