@@ -25,6 +25,7 @@ export default {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
+          jsonrpc: "2.0",
           method: this.method,
           params: this.params,
           id: this.id
